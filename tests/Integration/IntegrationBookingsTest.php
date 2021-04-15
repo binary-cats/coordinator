@@ -109,8 +109,8 @@ class IntegrationBookingsTest extends TestCase
     {
         $resource = $this->bookableResource();
 
-        $this->assertTrue($resource->isAvailableFor($this->canBookResources(), fn($m, $r) => true));
-        $this->assertFalse($resource->isAvailableFor($this->canBookResources(), fn($m, $r) => false));
+        $this->assertTrue($resource->isAvailableFor($this->canBookResources(), fn ($m, $r) => true));
+        $this->assertFalse($resource->isAvailableFor($this->canBookResources(), fn ($m, $r) => false));
     }
 
     /**
