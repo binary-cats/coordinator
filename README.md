@@ -2,6 +2,10 @@
 
 **Coordinator** is a generic resource booking system for Laravel, built with simplicity in mind. It will allow you to book (or schedule) resources using simple intuitive API.
 
+![https://github.com/binary-cats/coordinator/actions](https://github.com/binary-cats/coordinator/workflows/Laravel/badge.svg)
+![https://github.styleci.io/repos/358098480](https://github.styleci.io/repos/358098480/shield)
+![https://scrutinizer-ci.com/g/binary-cats/coordinator/](https://scrutinizer-ci.com/g/binary-cats/coordinator/badges/quality-score.png?b=master)
+
 The package is built with expectations that you would probably extending it for you own needs, so very few conventions are used. Please make sure to familiarize yourselves with the [concepts](#concepts).
 
 ## Installation
