@@ -1,3 +1,5 @@
+<p align="center"><img src="./resources/images/coordinator.svg" height="120"></p>
+
 # Coordinator
 
 **Coordinator** is a generic resource booking system for Laravel, built with simplicity in mind. It will allow you to book (or schedule) resources using simple intuitive API.
