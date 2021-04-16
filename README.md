@@ -118,20 +118,24 @@ class Room extends Model implements BookableResource
     use CanBeBooked;
 }
 ```
-Note that Resource is implementing `BinaryCats\Coordinator\Contracts\BookableResource`:
+Notice that _Resource_ is implementing `BinaryCats\Coordinator\Contracts\BookableResource`.
 
 Now, a model that _books resources_:
 ```php
 
 use BinaryCats\Coordinator\BooksResources;
-use BinaryCats\Coordinator\Contracts\BookableResource;
+use BinaryCats\Coordinator\Contracts\CanBookResources;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model implements BookableResource
+class User extends Model implements CanBookResources
 {
     use BooksResources;
 }
 ```
+Notice that _Model_ is implementing `BinaryCats\Coordinator\Contracts\CanBookResources`.
+
+Just like with notifications, you should not be bound by thinking "it is a user that books something". Any model can be booking any other resource; _a Driver user can be booked by a Delivery_ for instance.
+
 
 **Coordinator** offers fluent interface to create a booking, that can be used on either side of the relation:
 ```php
@@ -259,8 +263,6 @@ Room::first()->isAvailableFor(User::first(), function($model, $resource) {
     // ... return resolution
 });
 ```
-
-Lastly, remember, that just like with notifications, you should not be bound by thinking "it is a user that books something". Any model can be booking any other resource; _a Driver user can be booked by a Delivery_ for instance.
 
 ## Changelog
 
