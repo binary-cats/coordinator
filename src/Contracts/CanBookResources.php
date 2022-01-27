@@ -14,15 +14,15 @@ interface CanBookResources
     public function bookings(): MorphMany;
 
     /**
-     * @param  \BinaryCats\Coordinator\Contracts\BookableResource $resource
-     * @param  iterable                                           $attributes
+     * @param  \BinaryCats\Coordinator\Contracts\BookableResource  $resource
+     * @param  iterable  $attributes
      * @return \BinaryCats\Coordinator\Contracts\Booking
      */
     public function createBookingFor(BookableResource $resource, iterable $attributes = []): Booking;
 
     /**
-     * @param  \BinaryCats\Coordinator\Contracts\BookableResource $resource
-     * @param  iterable                                           $attributes
+     * @param  \BinaryCats\Coordinator\Contracts\BookableResource  $resource
+     * @param  iterable  $attributes
      * @return \BinaryCats\Coordinator\Contracts\Booking
      */
     public function makeBookingFor(BookableResource $resource, iterable $attributes = []): Booking;

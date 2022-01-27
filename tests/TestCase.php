@@ -3,13 +3,13 @@
 namespace Tests;
 
 use BinaryCats\Coordinator\CoordinatorServiceProvider;
-use Tests\Models\BookableResourceModel;
-use Tests\Models\CanBookResourcesModel;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Foundation\Exceptions\Handler;
 use Illuminate\Support\Facades\Schema;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
+use Tests\Models\BookableResourceModel;
+use Tests\Models\CanBookResourcesModel;
 use Throwable;
 
 abstract class TestCase extends OrchestraTestCase
@@ -25,8 +25,7 @@ abstract class TestCase extends OrchestraTestCase
     }
 
     /**
-     * @param \Illuminate\Foundation\Application $app
-     *
+     * @param  \Illuminate\Foundation\Application  $app
      * @return array
      */
     protected function getPackageProviders($app): array
@@ -37,7 +36,7 @@ abstract class TestCase extends OrchestraTestCase
     }
 
     /**
-     * @param \Illuminate\Foundation\Application $app
+     * @param  \Illuminate\Foundation\Application  $app
      * @return void
      */
     protected function getEnvironmentSetUp($app): void
@@ -71,7 +70,8 @@ abstract class TestCase extends OrchestraTestCase
     protected function disableExceptionHandling(): void
     {
         $this->app->instance(
-            ExceptionHandler::class, new class extends Handler {
+            ExceptionHandler::class, new class extends Handler
+            {
                 public function __construct()
                 {
                 }

@@ -32,8 +32,8 @@ trait BooksResources
     /**
      * Create new Booking.
      *
-     * @param  \BinaryCats\Coordinator\Contracts\BookableResource $resource
-     * @param  array                                              $attributes
+     * @param  \BinaryCats\Coordinator\Contracts\BookableResource  $resource
+     * @param  array  $attributes
      * @return \BinaryCats\Coordinator\Contracts\Booking
      */
     public function createBookingFor(BookableResource $resource, $attributes = []): Booking
@@ -44,8 +44,8 @@ trait BooksResources
     /**
      * Make a new Booking without saving it.
      *
-     * @param  \BinaryCats\Coordinator\Contracts\BookableResource $resource
-     * @param  array                                              $attributes
+     * @param  \BinaryCats\Coordinator\Contracts\BookableResource  $resource
+     * @param  array  $attributes
      * @return \BinaryCats\Coordinator\Contracts\Booking
      */
     public function makeBookingFor(BookableResource $resource, $attributes = []): Booking
