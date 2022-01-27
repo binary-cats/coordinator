@@ -18,17 +18,15 @@ class CoordinatorServiceProvider extends PackageServiceProvider
         $package
             ->name('coordinator')
             ->hasConfigFile()
-            ->hasMigrations(
-                [
-                    'create_bookings_table',
-                ]
-            );
+            ->hasMigrations([
+                'create_bookings_table',
+            ]);
     }
 
     /**
      * Get the services provided by the provider.
      *
-     * @return array
+     * @return string[]
      */
     public function provides()
     {

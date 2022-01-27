@@ -25,7 +25,7 @@ class Booking extends Model implements Contract
     /**
      * The attributes that are mass assignable.
      *
-     * @var array
+     * @var string[]
      */
     protected $fillable = [
         'starts_at',
@@ -36,7 +36,7 @@ class Booking extends Model implements Contract
     /**
      * The attributes that should be cast to native types.
      *
-     * @var array
+     * @var string[]
      */
     protected $casts = [
         'canceled_at' => 'datetime',

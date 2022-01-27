@@ -7,6 +7,9 @@ use BinaryCats\Coordinator\Contracts\Booking;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
+/**
+ * @mixin Model
+ */
 trait BooksResources
 {
     /**

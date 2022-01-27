@@ -49,9 +49,8 @@
         "binary-cats/laravel-mailgun-webhooks": "Handle Mailgun webhooks in your Laravel application"
     },
     "scripts": {
-        "analyze": "./vendor/bin/phpstan analyse app tests --memory-limit=2G",
+        "analyze": "./vendor/bin/phpstan analyse src --memory-limit=2G",
         "coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-html coverage -d pcov.enabled",
-        "fix": "./vendor/bin/php-cs-fixer fix --verbose --show-progress=dots  src tests",
         "test": "./vendor/bin/phpunit --color=always -vvv"
     },
     "config": {

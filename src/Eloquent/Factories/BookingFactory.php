@@ -17,7 +17,7 @@ class BookingFactory extends Factory
     /**
      * Define the model's default state.
      *
-     * @return array
+     * @return mixed[]
      */
     public function definition()
     {

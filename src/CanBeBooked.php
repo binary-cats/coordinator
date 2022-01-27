@@ -8,6 +8,9 @@ use Closure;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
+/**
+ * @mixin Model
+ */
 trait CanBeBooked
 {
     /**
