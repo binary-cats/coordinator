@@ -3,8 +3,8 @@
 namespace Tests\Unit;
 
 use BinaryCats\Coordinator\Contracts\Booking;
-use Tests\TestCase;
 use Spatie\Period\Period;
+use Tests\TestCase;
 
 class BookingsTest extends TestCase
 {

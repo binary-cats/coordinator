@@ -33,8 +33,8 @@ trait CanBeBooked
     /**
      * True if the resource is available at a given argument.
      *
-     * @param  string|\DateTimeInterface|\Carbon\Carbon|\Spatie\Period\Period $at
-     * @param  bool                                                        $includeCanceled
+     * @param  string|\DateTimeInterface|\Carbon\Carbon|\Spatie\Period\Period  $at
+     * @param  bool  $includeCanceled
      * @return bool
      */
     public function isAvailableAt($at, $includeCanceled = false): bool
@@ -48,8 +48,8 @@ trait CanBeBooked
     /**
      * True if the resource is not available at a given argument.
      *
-     * @param  string|\DateTimeInterface|\Carbon\Carbon|\Spatie\Period\Period $at
-     * @param  bool                                                        $includeCanceled
+     * @param  string|\DateTimeInterface|\Carbon\Carbon|\Spatie\Period\Period  $at
+     * @param  bool  $includeCanceled
      * @return bool
      */
     public function isBookedAt($at, $includeCanceled = false): bool
@@ -60,8 +60,8 @@ trait CanBeBooked
     /**
      * True if the resource is available at a given argument.
      *
-     * @param  \BinaryCats\Coordinator\Contracts\CanBookResources $model
-     * @param  \Closure                                           $closure
+     * @param  \BinaryCats\Coordinator\Contracts\CanBookResources  $model
+     * @param  \Closure  $closure
      * @return bool
      */
     public function isAvailableFor(CanBookResources $model, Closure $closure): bool
@@ -72,8 +72,8 @@ trait CanBeBooked
     /**
      * Create new Booking.
      *
-     * @param  \BinaryCats\Coordinator\Contracts\CanBookResources $model
-     * @param  array                                              $attributes
+     * @param  \BinaryCats\Coordinator\Contracts\CanBookResources  $model
+     * @param  array  $attributes
      * @return \BinaryCats\Coordinator\Contracts\Booking
      */
     public function createBookingFor(CanBookResources $model, $attributes = []): Booking
@@ -84,8 +84,8 @@ trait CanBeBooked
     /**
      * Make a new Booking without saving it.
      *
-     * @param  \BinaryCats\Coordinator\Contracts\CanBookResources $model
-     * @param  array                                              $attributes
+     * @param  \BinaryCats\Coordinator\Contracts\CanBookResources  $model
+     * @param  array  $attributes
      * @return \BinaryCats\Coordinator\Contracts\Booking
      */
     public function makeBookingFor(CanBookResources $model, $attributes = []): Booking

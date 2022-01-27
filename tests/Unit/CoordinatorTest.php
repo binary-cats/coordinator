@@ -3,9 +3,9 @@
 namespace Tests\Unit;
 
 use BinaryCats\Coordinator\Coordinator;
-use Tests\TestCase;
 use Spatie\Period\Boundaries;
 use Spatie\Period\Precision;
+use Tests\TestCase;
 
 class CoordinatorTest extends TestCase
 {

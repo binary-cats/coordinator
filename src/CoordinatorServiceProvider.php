@@ -10,7 +10,7 @@ class CoordinatorServiceProvider extends PackageServiceProvider
     /**
      * Configure Coordinator Package.
      *
-     * @param  \Spatie\LaravelPackageTools\Package $package
+     * @param  \Spatie\LaravelPackageTools\Package  $package
      * @return void
      */
     public function configurePackage(Package $package): void

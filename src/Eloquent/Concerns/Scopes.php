@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 trait Scopes
 {
     /**
-     * @param  \Illuminate\Database\Eloquent\Builder $query
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeCancelled(Builder $query): Builder
@@ -18,7 +18,7 @@ trait Scopes
     }
 
     /**
-     * @param  \Illuminate\Database\Eloquent\Builder $query
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeWithoutCancelled(Builder $query): Builder
@@ -27,8 +27,8 @@ trait Scopes
     }
 
     /**
-     * @param  \Illuminate\Database\Eloquent\Builder                   $query
-     * @param  \Carbon\Carbon|\DateTime|\DateTimeInterface|string|null $at
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  \Carbon\Carbon|\DateTime|\DateTimeInterface|string|null  $at
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopePast(Builder $query, $at = null): Builder
@@ -39,8 +39,8 @@ trait Scopes
     }
 
     /**
-     * @param  \Illuminate\Database\Eloquent\Builder                   $query
-     * @param  \Carbon\Carbon|\DateTime|\DateTimeInterface|string|null $at
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  \Carbon\Carbon|\DateTime|\DateTimeInterface|string|null  $at
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeFuture(Builder $query, $at = null): Builder
@@ -51,8 +51,8 @@ trait Scopes
     }
 
     /**
-     * @param  \Illuminate\Database\Eloquent\Builder                   $query
-     * @param  \Carbon\Carbon|\DateTime|\DateTimeInterface|string|null $at
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  \Carbon\Carbon|\DateTime|\DateTimeInterface|string|null  $at
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeCurrent(Builder $query, $at = null): Builder
@@ -63,8 +63,8 @@ trait Scopes
     }
 
     /**
-     * @param  \Illuminate\Database\Eloquent\Builder $query
-     * @param  \Illuminate\Database\Eloquent\Model   $model
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  \Illuminate\Database\Eloquent\Model  $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeForModel($query, Model $model): Builder
@@ -77,8 +77,8 @@ trait Scopes
     }
 
     /**
-     * @param  \Illuminate\Database\Eloquent\Builder $query
-     * @param  \Illuminate\Database\Eloquent\Model   $resource
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  \Illuminate\Database\Eloquent\Model  $resource
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeForResource($query, Model $resource): Builder

@@ -24,7 +24,7 @@ trait Periodable
     /**
      * True if the booking period starts after the argument (or now).
      *
-     * @param  \Carbon\Carbon|null $at
+     * @param  \Carbon\Carbon|null  $at
      * @return bool
      */
     public function isFuture($at = null): bool
@@ -37,7 +37,7 @@ trait Periodable
     /**
      * True if the booking period ends after the argument (or now).
      *
-     * @param  \Carbon\Carbon|null $at
+     * @param  \Carbon\Carbon|null  $at
      * @return bool
      */
     public function isPast($at = null): bool
@@ -50,7 +50,7 @@ trait Periodable
     /**
      * True if the booking period contains the argument (or now).
      *
-     * @param  \Carbon\Carbon|\Spatie\Period\Period|string|null $at
+     * @param  \Carbon\Carbon|\Spatie\Period\Period|string|null  $at
      * @return bool
      */
     public function isCurrent($at = null): bool
@@ -69,7 +69,7 @@ trait Periodable
     /**
      * Shortcut to Period's overlaps with.
      *
-     * @param  \Spatie\Period\Period $period
+     * @param  \Spatie\Period\Period  $period
      * @return bool
      */
     public function overlapsWith(Period $period)

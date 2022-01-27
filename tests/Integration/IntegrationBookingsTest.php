@@ -3,11 +3,11 @@
 namespace Tests\Integration;
 
 use BinaryCats\Coordinator\Eloquent\Booking;
+use Carbon\Carbon;
+use DateTime;
 use Tests\Models\BookableResourceModel;
 use Tests\Models\CanBookResourcesModel;
 use Tests\TestCase;
-use Carbon\Carbon;
-use DateTime;
 
 class IntegrationBookingsTest extends TestCase
 {
