@@ -27,8 +27,6 @@
         "spatie/period": "^2.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.0",
-        "nunomaduro/larastan": "^1.0|^2.0",
         "orchestra/testbench": "^6.0|^7.0",
         "phpunit/phpunit": "^9.4"
     },
@@ -49,7 +47,6 @@
         "binary-cats/laravel-mailgun-webhooks": "Handle Mailgun webhooks in your Laravel application"
     },
     "scripts": {
-        "analyze": "./vendor/bin/phpstan analyse src --memory-limit=2G",
         "coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-html coverage -d pcov.enabled",
         "test": "./vendor/bin/phpunit --color=always -vvv"
     },
