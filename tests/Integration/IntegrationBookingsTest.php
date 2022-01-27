@@ -1,11 +1,11 @@
 <?php
 
-namespace BinaryCats\Coordinator\Tests\Integration;
+namespace Tests\Integration;
 
 use BinaryCats\Coordinator\Eloquent\Booking;
-use BinaryCats\Coordinator\Tests\Models\BookableResourceModel;
-use BinaryCats\Coordinator\Tests\Models\CanBookResourcesModel;
-use BinaryCats\Coordinator\Tests\TestCase;
+use Tests\Models\BookableResourceModel;
+use Tests\Models\CanBookResourcesModel;
+use Tests\TestCase;
 use Carbon\Carbon;
 use DateTime;
 

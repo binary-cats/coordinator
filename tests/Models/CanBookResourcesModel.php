@@ -1,6 +1,6 @@
 <?php
 
-namespace BinaryCats\Coordinator\Tests\Models;
+namespace Tests\Models;
 
 use BinaryCats\Coordinator\BooksResources;
 use BinaryCats\Coordinator\Contracts\CanBookResources;

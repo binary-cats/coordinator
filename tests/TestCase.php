@@ -1,10 +1,10 @@
 <?php
 
-namespace BinaryCats\Coordinator\Tests;
+namespace Tests;
 
 use BinaryCats\Coordinator\CoordinatorServiceProvider;
-use BinaryCats\Coordinator\Tests\Models\BookableResourceModel;
-use BinaryCats\Coordinator\Tests\Models\CanBookResourcesModel;
+use Tests\Models\BookableResourceModel;
+use Tests\Models\CanBookResourcesModel;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Foundation\Exceptions\Handler;
@@ -42,8 +42,8 @@ abstract class TestCase extends OrchestraTestCase
      */
     protected function getEnvironmentSetUp($app): void
     {
-        $app['config']->set('database.default', 'sqlite');
-        $app['config']->set('database.connections.sqlite', [
+        config()->set('database.default', 'sqlite');
+        config()->set('database.connections.sqlite', [
             'driver'   => 'sqlite',
             'database' => ':memory:',
             'prefix'   => '',
@@ -55,9 +55,9 @@ abstract class TestCase extends OrchestraTestCase
      */
     protected function setUpDatabase(): void
     {
-        include_once __DIR__.'/../database/migrations/create_bookings_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_bookings_table.php.stub';
 
-        (new \CreateBookingsTable())->up();
+        $migration->up();
         // create fake tables
         $this->createTables('bookable_resource_models', 'can_book_resources_models');
         $this->seedModels(BookableResourceModel::class, CanBookResourcesModel::class);
@@ -88,6 +88,10 @@ abstract class TestCase extends OrchestraTestCase
         );
     }
 
+    /**
+     * @param ...$tableNames
+     * @return void
+     */
     protected function createTables(...$tableNames)
     {
         collect($tableNames)->each(function (string $tableName) {
@@ -99,6 +103,10 @@ abstract class TestCase extends OrchestraTestCase
         });
     }
 
+    /**
+     * @param ...$modelClasses
+     * @return void
+     */
     protected function seedModels(...$modelClasses)
     {
         collect($modelClasses)->each(function (string $modelClass) {

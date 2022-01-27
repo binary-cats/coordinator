@@ -21,42 +21,47 @@
         }
     ],
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.0",
         "illuminate/support": "^8.0|^9.0",
         "spatie/laravel-package-tools":"^1.0",
         "spatie/period": "^2.0"
     },
     "require-dev": {
-        "nunomaduro/larastan": "^0.7.3",
-        "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^9.0",
-        "squizlabs/php_codesniffer": "3.*"
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "nunomaduro/larastan": "^1.0|^2.0",
+        "orchestra/testbench": "^6.0|^7.0",
+        "phpunit/phpunit": "^9.4"
     },
     "autoload": {
         "psr-4": {
-            "BinaryCats\\Coordinator\\": "src",
+            "BinaryCats\\Coordinator\\": "src/",
             "Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BinaryCats\\Coordinator\\Tests\\": "tests"
+            "Tests\\": "tests/"
         }
     },
     "suggest": {
         "binary-cats/laravel-sku": "Generate SKU in your Laravel models",
+        "binary-cats/laravel-lob-webhooks": "Handle lob.com webhooks in your Laravel application",
         "binary-cats/laravel-mailgun-webhooks": "Handle Mailgun webhooks in your Laravel application"
     },
     "scripts": {
-        "analyze": "./vendor/bin/phpstan analyse src tests --memory-limit=2G",
-        "fix": "./vendor/bin/phpcbf -p --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
-        "style": "./vendor/bin/phpcs -p --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 --report-width=200 --report-summary --report-full --standard=PSR2 -n src tests",
-        "test": "./vendor/bin/phpunit --color=always"
+        "analyze": "./vendor/bin/phpstan analyse app tests --memory-limit=2G",
+        "coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-html coverage -d pcov.enabled",
+        "fix": "./vendor/bin/php-cs-fixer fix --verbose --show-progress=dots  src tests",
+        "test": "./vendor/bin/phpunit --color=always -vvv"
     },
     "config": {
+        "optimize-autoloader": true,
         "sort-packages": true
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "9.x-dev"
+        },
         "laravel": {
             "providers": [
                 "BinaryCats\\Coordinator\\CoordinatorServiceProvider"

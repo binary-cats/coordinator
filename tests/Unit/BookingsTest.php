@@ -1,9 +1,9 @@
 <?php
 
-namespace BinaryCats\Coordinator\Tests\Unit;
+namespace Tests\Unit;
 
 use BinaryCats\Coordinator\Contracts\Booking;
-use BinaryCats\Coordinator\Tests\TestCase;
+use Tests\TestCase;
 use Spatie\Period\Period;
 
 class BookingsTest extends TestCase
