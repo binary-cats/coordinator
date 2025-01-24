@@ -43,9 +43,9 @@ abstract class TestCase extends OrchestraTestCase
     {
         config()->set('database.default', 'sqlite');
         config()->set('database.connections.sqlite', [
-            'driver'   => 'sqlite',
+            'driver' => 'sqlite',
             'database' => ':memory:',
-            'prefix'   => '',
+            'prefix' => '',
         ]);
     }
 
@@ -89,7 +89,7 @@ abstract class TestCase extends OrchestraTestCase
     }
 
     /**
-     * @param ...$tableNames
+     * @param  ...$tableNames
      * @return void
      */
     protected function createTables(...$tableNames)
@@ -104,7 +104,7 @@ abstract class TestCase extends OrchestraTestCase
     }
 
     /**
-     * @param ...$modelClasses
+     * @param  ...$modelClasses
      * @return void
      */
     protected function seedModels(...$modelClasses)
